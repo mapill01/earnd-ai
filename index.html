@@ -9,16 +9,16 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --lime: #C8F04D;
-    --lime-dark: #a8d030;
-    --dark: #0E0E0E;
-    --dark2: #161616;
-    --dark3: #1E1E1E;
-    --mid: #2A2A2A;
-    --muted: #888;
-    --white: #FAFAF8;
-    --orange: #FF6B35;
-    --blue: #4DAAFF;
+    --lime: #8AC926;
+    --lime-dark: #6fa31e;
+    --dark: #FFFFFF;
+    --dark2: #F5F7F2;
+    --dark3: #ECEEE9;
+    --mid: #E0E3DB;
+    --muted: #666;
+    --white: #111111;
+    --orange: #E05A20;
+    --blue: #1A7ACC;
   }
 
   html { scroll-behavior: smooth; }
@@ -41,7 +41,7 @@
     pointer-events: none;
     z-index: 9999;
     transition: transform 0.15s ease;
-    mix-blend-mode: difference;
+    mix-blend-mode: multiply;
   }
   .cursor-ring {
     width: 36px; height: 36px;
@@ -64,9 +64,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(14,14,14,0.85);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
   }
 
   .logo {
@@ -91,7 +91,7 @@
     letter-spacing: 0.3px;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--white); }
+  .nav-links a:hover { color: #111111; }
 
   .nav-cta {
     background: var(--lime);
@@ -119,16 +119,16 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(200,240,77,0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(77,170,255,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(138,201,38,0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(26,122,204,0.07) 0%, transparent 60%);
   }
 
   .hero-tag {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(200,240,77,0.1);
-    border: 1px solid rgba(200,240,77,0.25);
+    background: rgba(138,201,38,0.12);
+    border: 1px solid rgba(138,201,38,0.3);
     border-radius: 100px;
     padding: 6px 16px;
     font-size: 13px;
@@ -162,7 +162,7 @@
 
   .hero h1 .accent { color: var(--lime); }
   .hero h1 .stroke {
-    -webkit-text-stroke: 2px var(--white);
+    -webkit-text-stroke: 2px #111111;
     color: transparent;
   }
 
@@ -221,7 +221,7 @@
     gap: 48px;
     margin-top: 80px;
     padding-top: 48px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(0,0,0,0.08);
     animation: fadeUp 0.8s 0.4s ease both;
     flex-wrap: wrap;
   }
@@ -255,7 +255,7 @@
 
   .float-card {
     background: var(--dark3);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,0,0,0.08);
     border-radius: 16px;
     padding: 16px 20px;
     width: 220px;
@@ -277,7 +277,7 @@
   }
   .fc-name { font-size: 13px; font-weight: 600; }
   .fc-badge {
-    background: rgba(200,240,77,0.15);
+    background: rgba(138,201,38,0.15);
     color: var(--lime);
     font-size: 11px;
     padding: 2px 8px;
@@ -315,7 +315,7 @@
     font-family: 'Syne', sans-serif;
     font-size: 13px;
     font-weight: 700;
-    color: var(--dark);
+    color: #111111;
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
@@ -391,7 +391,7 @@
 
   .leo-card {
     background: var(--dark3);
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(0,0,0,0.07);
     border-radius: 24px;
     padding: 40px;
     position: relative;
@@ -444,7 +444,7 @@
 
   .badge {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 100px;
     padding: 6px 14px;
     font-size: 12px;
@@ -506,7 +506,7 @@
     border-radius: 100px;
     width: fit-content;
     margin: 48px 0 60px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(0,0,0,0.07);
   }
 
   .tab {
@@ -531,7 +531,7 @@
 
   .step-card {
     background: var(--dark3);
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(0,0,0,0.07);
     border-radius: 20px;
     padding: 32px;
     position: relative;
@@ -541,7 +541,7 @@
     font-family: 'Syne', sans-serif;
     font-size: 64px;
     font-weight: 800;
-    color: rgba(200,240,77,0.1);
+    color: rgba(138,201,38,0.15);
     line-height: 1;
     margin-bottom: 16px;
   }
@@ -574,16 +574,16 @@
     padding: 20px;
     background: var(--dark3);
     border-radius: 14px;
-    border: 1px solid rgba(255,255,255,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
     transition: border-color 0.3s;
   }
-  .safety-item:hover { border-color: rgba(200,240,77,0.2); }
+  .safety-item:hover { border-color: rgba(138,201,38,0.35); }
 
   .si-icon {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background: rgba(200,240,77,0.1);
+    background: rgba(138,201,38,0.12);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -600,7 +600,7 @@
 
   .phone-mock {
     background: var(--dark3);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,0,0,0.08);
     border-radius: 32px;
     padding: 32px 24px;
     max-width: 300px;
@@ -663,7 +663,7 @@
     border-radius: 100px;
     width: fit-content;
     margin: 40px auto 32px;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(0,0,0,0.07);
   }
 
   .wl-forms { display: none; }
@@ -690,7 +690,7 @@
 
   .field input, .field select {
     background: var(--dark3);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 12px;
     padding: 14px 16px;
     color: var(--white);
@@ -706,7 +706,7 @@
     border-color: var(--lime);
   }
 
-  .field select { background-color: var(--dark3); }
+  .field select { background-color: var(--dark3); color: var(--white); }
   .field select option { background: var(--dark); }
 
   .submit-btn {
@@ -727,7 +727,7 @@
 
   .success-msg {
     display: none;
-    background: rgba(200,240,77,0.1);
+    background: rgba(138,201,38,0.12);
     border: 1px solid rgba(200,240,77,0.3);
     border-radius: 16px;
     padding: 24px;
@@ -756,7 +756,7 @@
   }
 
   .mission-quote .hl { color: var(--lime); }
-  .mission-quote .hl2 { -webkit-text-stroke: 2px var(--white); color: transparent; }
+  .mission-quote .hl2 { -webkit-text-stroke: 2px #111111; color: transparent; }
 
   .mission-sub {
     font-size: 18px;
@@ -770,7 +770,7 @@
   /* FOOTER */
   footer {
     background: var(--dark2);
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(0,0,0,0.08);
     padding: 48px;
     display: flex;
     justify-content: space-between;
