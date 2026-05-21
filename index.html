@@ -29,6 +29,8 @@
     color: var(--white);
     overflow-x: hidden;
     cursor: none;
+    margin: 0;
+    padding: 0;
   }
 
   /* Custom cursor */
@@ -162,8 +164,12 @@
 
   .hero h1 .accent { color: var(--lime); }
   .hero h1 .stroke {
-    -webkit-text-stroke: 2px #111111;
-    color: transparent;
+    color: #111111;
+    background: var(--lime);
+    display: inline;
+    padding: 2px 14px 6px;
+    border-radius: 10px;
+    font-style: italic;
   }
 
   .hero-sub {
@@ -756,7 +762,7 @@
   }
 
   .mission-quote .hl { color: var(--lime); }
-  .mission-quote .hl2 { -webkit-text-stroke: 2px #111111; color: transparent; }
+  .mission-quote .hl2 { color: #111111; background: var(--lime); padding: 0 8px 4px; border-radius: 6px; font-style: italic; }
 
   .mission-sub {
     font-size: 18px;
@@ -771,11 +777,13 @@
   footer {
     background: var(--dark2);
     border-top: 1px solid rgba(0,0,0,0.08);
-    padding: 48px;
+    padding: 40px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: gap;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 0;
   }
 
   .footer-logo {
@@ -966,7 +974,7 @@
         <div class="leo-name">Leo</div>
         <div class="leo-title">Founder & CEO (age 14) — Earnd.ai</div>
         <div class="leo-story">
-          "I pitched the idea at school and my mates loved it. Then I showed my parents and they helped me think through how to make it safe. The more we talked about it, the bigger it got — but the core idea is still the same. Get kids off their phones and earning."
+          "I pitched the idea at school. My assistant head teacher and my mates loved it. Then I showed my parents and they helped me think through how to make it safe. The more we talked about it, the bigger it got — but the core idea is still the same. Get kids off their phones and earning."
         </div>
         <div class="leo-badges">
           <span class="badge">🏫 School Entrepreneur</span>
@@ -1185,6 +1193,9 @@
   </div>
 </footer>
 
+<!-- SCROLL TO TOP -->
+<button id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:32px;right:32px;width:48px;height:48px;border-radius:50%;background:var(--lime);border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 20px rgba(0,0,0,0.15);z-index:500;transition:all 0.2s;">↑</button>
+
 <script>
   // Cursor
   const cursor = document.getElementById('cursor');
@@ -1217,6 +1228,12 @@
     event.target.classList.add('active');
     document.getElementById('wl-' + id).classList.add('active');
   }
+
+  // Scroll to top button
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+  });
 
   // Scroll reveal
   const observer = new IntersectionObserver(entries => {
